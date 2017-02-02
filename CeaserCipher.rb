@@ -5,7 +5,7 @@ if input.empty?
 puts "Please Enter Something!!!"
 else
 @input = input.downcase.split(" ")
-puts "Enter the shift value (e.g: -5 or 2 | Note: shift value should be remembered):"
+puts "Enter the shift value (e.g: -5 or 2 | Note: shift value should be memorized):"
 @shift = gets.chomp.to_i
 @shift = @shift % 26
 @shifting = @input.map! {|x| x.chars.map {|y| y.ord}}.map! {|x| x.map! {|y| y += @shift; y -= 26 if y >= 123; y.chr}.join}.join(" ")
